@@ -15,7 +15,7 @@ export default {
 
 <style>
 .lh-real-estate-preview {
-  @apply rounded-xl h-49 w-73 overflow-hidden;
+  @apply rounded-xl w-full overflow-hidden;
 }
 
 .lh-real-estate-preview__image {
