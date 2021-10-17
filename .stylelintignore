@@ -1,0 +1,13 @@
+!**/.eslintrc*
+_test*
+node_modules*
+almendra-components*
+*.test.js
+dist
+*.svg
+*.ico
+*.json
+.gitignore
+*.md
+*.log
+*.lock
