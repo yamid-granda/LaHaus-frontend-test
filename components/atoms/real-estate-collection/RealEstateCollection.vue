@@ -120,7 +120,7 @@ export default {
 .lh-real-estate-collection--double {
   .lh-real-estate-collection__preview {
     &:first-child {
-      @apply w-39;
+      @apply w-40;
     }
     &:last-child {
       @apply w-37 left-0 right-auto;
