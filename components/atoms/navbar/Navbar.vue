@@ -26,7 +26,7 @@
         {{ text }}
       </nuxt-link>
       <nuxt-link to="/mi-perfil" class="lh-navbar__link lh-navbar__profile-link">
-        Mi Perfil
+        {{ $translate('My Profile') }}
         <div class="lh-navbar__profile-chevron">
           <ChevronDownIcon />
         </div>
@@ -46,8 +46,14 @@ import {
   SymbolLogoIcon,
   NotificationIcon,
 } from '@/icons'
+import translateMixin from '@/mixins/translate'
+
+const defaultTranslations = {
+  'My Profile': 'Mi Perfil',
+}
 
 export default {
+  mixins: [translateMixin],
   components: {
     HamburgerIcon,
     IsoTypeIcon,
@@ -58,6 +64,7 @@ export default {
   props: {
     links: { type: Array, default: () => [] },
     hasNotifications: { type: Boolean, default: false },
+    $translations: { type: Object, default: () => ({}) },
   },
   data() {
     return {
