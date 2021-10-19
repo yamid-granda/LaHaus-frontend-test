@@ -9,6 +9,7 @@
       >
         <RealEstateCollection :name="name" :real-estates="realEstates"></RealEstateCollection>
       </nuxt-link>
+      <slot name="after-last-collection" />
     </div>
   </div>
 </template>
