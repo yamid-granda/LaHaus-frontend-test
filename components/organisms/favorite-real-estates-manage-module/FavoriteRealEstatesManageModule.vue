@@ -1,15 +1,21 @@
 <template>
   <div class="lh-favorite-real-estates-manage-module">
-    <RealEstateCollections :collections="collections" />
+    <RealEstateCollections :collections="collections">
+      <template #after-last-collection>
+        <div class="lh-favorite-real-estates-manage-module__new">
+          <PreviewAction icon="+" message="Crear una nueva lista" />
+        </div>
+      </template>
+    </RealEstateCollections>
   </div>
 </template>
 
 <script>
 import { getFavoriteRealEstateCollections } from '@/utils'
-import { RealEstateCollections } from '@/components'
+import { RealEstateCollections, PreviewAction } from '@/components'
 
 export default {
-  components: { RealEstateCollections },
+  components: { RealEstateCollections, PreviewAction },
   async fetch() {
     this.collections = await getFavoriteRealEstateCollections()
   },
