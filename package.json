@@ -32,6 +32,7 @@
     "eslint-plugin-vue": "^7.12.1",
     "fibers": "^5.0.0",
     "jest": "^27.0.5",
+    "nuxt-vite": "^0.3.5",
     "postcss": "^8.3.5",
     "prettier": "^2.3.2",
     "sass": "^1.43.2",

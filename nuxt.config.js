@@ -28,8 +28,15 @@ export default {
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: false,
 
+  // uncomment 'ssr: false' and 'vite' to allows a faster dev environment
+  // ssr: false,
+  // vite: {
+  // },
+
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
+    // uncomment 'nuxt-vite' to allows a faster dev environment 
+    // 'nuxt-vite',
     // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
     // https://go.nuxtjs.dev/stylelint
