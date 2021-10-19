@@ -19,7 +19,7 @@
     <h2 class="lh-real-estate-collection__name">{{ name }}</h2>
     <div class="lh-real-estate-collection__count">
       {{ quantity }}
-      {{ 'propiedades guardadas' }}
+      {{ $translate('saved properties', quantity) }}
     </div>
     <div v-if="hasManyRealEstates" class="lh-real-estate-collection__remaining">
       +{{ remainingQuantity }}
@@ -29,14 +29,22 @@
 
 <script>
 import RealEstatePreview from '@/components/atoms/real-estate-preview/RealEstatePreview.vue'
+import translateMixin from '@/mixins/translate'
+
+const defaultTranslations = {
+  'My Profile': 'Mi Perfil',
+  'saved properties': 'propiedades guardadas',
+}
 
 export default {
+  mixins: [translateMixin],
   components: {
     RealEstatePreview,
   },
   props: {
     realEstates: { type: Array, default: () => [] },
     name: { type: String, required: true },
+    $translations: { type: Object, default: () => ({}) },
   },
   computed: {
     previewsQuantity() {
