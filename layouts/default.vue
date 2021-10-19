@@ -9,15 +9,17 @@
 
 <script>
 import { AppContainer, Navbar } from '@/components'
+import translateMixin from '@/mixins/translate'
 
 export default {
+  mixins: [translateMixin],
   components: { AppContainer, Navbar },
   data() {
     return {
       links: [
         { text: 'Cundinamarca', href: '/cundinamarca' },
         { text: 'Antioquia', href: '/antioquia' },
-        { text: 'Recursos', href: '/recursos' },
+        { text: this.$translate('Resources'), href: '/recursos' },
       ],
     }
   },
