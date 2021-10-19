@@ -1,5 +1,6 @@
 <template>
   <div>
+    <Navbar :links="links" has-notifications></Navbar>
     <AppContainer>
       <Nuxt />
     </AppContainer>
@@ -7,10 +8,19 @@
 </template>
 
 <script>
-import { AppContainer } from '@/components'
+import { AppContainer, Navbar } from '@/components'
 
 export default {
-  components: { AppContainer },
+  components: { AppContainer, Navbar },
+  data() {
+    return {
+      links: [
+        { text: 'Cundinamarca', href: '/cundinamarca' },
+        { text: 'Antioquia', href: '/antioquia' },
+        { text: 'Recursos', href: '/recursos' },
+      ],
+    }
+  },
 }
 </script>
 
