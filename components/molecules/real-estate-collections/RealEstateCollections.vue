@@ -1,13 +1,14 @@
 <template>
   <div class="lh-real-estate-collections">
     <div class="lh-real-estate-collections__collections">
-      <div
+      <nuxt-link
         v-for="{ id, realEstates, name } in collections"
         :key="id"
+        :to="`/${id}`"
         class="lh-real-estate-collections__collection"
       >
         <RealEstateCollection :name="name" :real-estates="realEstates"></RealEstateCollection>
-      </div>
+      </nuxt-link>
     </div>
   </div>
 </template>
