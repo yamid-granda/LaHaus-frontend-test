@@ -2,6 +2,7 @@
 
 - Not saves data in API
 - Not imports data from API
+- Not applies internationalization/localization strategy
 - Represents an unique software front-end piece
 - Used to general purposes
 - Is an abstract (dumb) component
