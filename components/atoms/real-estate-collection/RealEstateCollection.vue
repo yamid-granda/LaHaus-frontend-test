@@ -16,8 +16,11 @@
         <RealEstatePreview :name="preview.name" :image="preview.imageSrc" />
       </div>
     </div>
-    <div class="lh-real-estate-collection__name">{{ name }}</div>
-    <div class="lh-real-estate-collection__count">{{ quantity }} {{ 'propiedades guardadas' }}</div>
+    <h2 class="lh-real-estate-collection__name">{{ name }}</h2>
+    <div class="lh-real-estate-collection__count">
+      {{ quantity }}
+      {{ 'propiedades guardadas' }}
+    </div>
     <div v-if="hasManyRealEstates" class="lh-real-estate-collection__remaining">
       +{{ remainingQuantity }}
     </div>
@@ -97,7 +100,7 @@ export default {
 }
 
 .lh-real-estate-collection__name {
-  @apply font-semibold text-lg text-lh-jungle-green-900 mt-4;
+  @apply font-semibold text-lg text-lh-jungle-green-900 mt-4 truncate;
 }
 
 .lh-real-estate-collection__count {
