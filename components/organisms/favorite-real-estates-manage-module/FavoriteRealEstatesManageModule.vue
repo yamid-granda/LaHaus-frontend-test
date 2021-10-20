@@ -15,6 +15,10 @@ import { getFavoriteRealEstateCollections } from '@/utils'
 import { RealEstateCollections, PreviewAction } from '@/components'
 import translateMixin from '@/mixins/translate'
 
+const defaultTranslations = {
+  'Create a new list': 'Crear una nueva lista',
+}
+
 export default {
   mixins: [translateMixin],
   components: { RealEstateCollections, PreviewAction },
