@@ -6,6 +6,7 @@
       'lh-real-estate-collection--many': hasManyRealEstates,
     }"
     class="lh-real-estate-collection"
+    test-id="real-estate-collection"
   >
     <div class="lh-real-estate-collection__previews">
       <div
@@ -21,7 +22,7 @@
       {{ quantity }}
       {{ $translate('saved properties', quantity) }}
     </div>
-    <div v-if="hasManyRealEstates" class="lh-real-estate-collection__remaining">
+    <div v-if="hasManyRealEstates" class="lh-real-estate-collection__remaining" test-id="remaining">
       +{{ remainingQuantity }}
     </div>
   </div>

@@ -1,5 +1,5 @@
 <template>
-  <div class="lh-real-estate-preview">
+  <div class="lh-real-estate-preview" test-id="real-estate-preview">
     <img class="lh-real-estate-preview__image" :src="image" :alt="name" />
   </div>
 </template>

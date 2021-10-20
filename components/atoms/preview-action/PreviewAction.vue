@@ -1,5 +1,5 @@
 <template>
-  <div class="lh-preview-action">
+  <div class="lh-preview-action" test-id="preview-action">
     <div class="lh-preview-action__preview">{{ icon }}</div>
     <div class="lh-preview-action__info">
       <slot name="info">{{ message }}</slot>
