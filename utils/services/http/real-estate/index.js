@@ -40,3 +40,8 @@ export async function getFavoriteRealEstateCollections() {
   const realEstatesDictionary = parseRealEstatesDataToDictionary(realEstatesData)
   return parseRealEstateCollectionsDataToCollections({ collectionsData, realEstatesDictionary })
 }
+
+export async function getCollectionById(id) {
+  const collections = await getFavoriteRealEstateCollections()
+  return collections.find(({ id: collectionId }) => id === collectionId) || null
+}
