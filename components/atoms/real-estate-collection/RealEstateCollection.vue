@@ -8,22 +8,29 @@
     class="lh-real-estate-collection"
     test-id="real-estate-collection"
   >
-    <div class="lh-real-estate-collection__previews">
+    <div class="lh-real-estate-collection__previews-container">
+      <div class="lh-real-estate-collection__previews">
+        <div
+          v-for="preview in realEstatePreviews"
+          :key="preview.id"
+          class="lh-real-estate-collection__preview"
+        >
+          <RealEstatePreview :name="preview.name" :image="preview.imageSrc" />
+        </div>
+      </div>
+
       <div
-        v-for="preview in realEstatePreviews"
-        :key="preview.id"
-        class="lh-real-estate-collection__preview"
+        v-if="hasManyRealEstates"
+        class="lh-real-estate-collection__remaining"
+        test-id="remaining"
       >
-        <RealEstatePreview :name="preview.name" :image="preview.imageSrc" />
+        +{{ remainingQuantity }}
       </div>
     </div>
     <h2 class="lh-real-estate-collection__name">{{ name }}</h2>
     <div class="lh-real-estate-collection__count">
       {{ quantity }}
       {{ $translate('saved properties', quantity) }}
-    </div>
-    <div v-if="hasManyRealEstates" class="lh-real-estate-collection__remaining" test-id="remaining">
-      +{{ remainingQuantity }}
     </div>
   </div>
 </template>
@@ -75,36 +82,37 @@ export default {
 
 <style lang="scss">
 .lh-real-estate-collection {
-  @apply relative w-73 pb-8 cursor-pointer;
+  @apply relative pb-8;
 
   .lh-real-estate-preview {
-    @apply border border-white h-full;
+    @apply h-full border border-white;
   }
+}
+
+.lh-real-estate-collection__previews-container {
+  @apply relative;
 }
 
 .lh-real-estate-collection__previews {
-  @apply relative h-49;
+  @apply relative;
+  aspect-ratio: 292 / 196; // allows aspect ratio layout
 }
 
 .lh-real-estate-collection__preview {
-  @apply absolute h-full -m-px;
-}
+  @apply absolute h-full;
 
-.lh-real-estate-collection__preview {
   &:last-child {
-    @apply w-37;
+    width: 51.36%; // allows aspect ratio layout
   }
-}
 
-.lh-real-estate-collection__preview {
   &:nth-child(2) {
-    @apply left-33 w-25;
+    left: 45.2%; // allows aspect ratio layout
+    width: 34.24%;
   }
-}
 
-.lh-real-estate-collection__preview {
   &:first-child {
-    @apply right-0 w-19;
+    @apply right-0;
+    width: 26.02%; // allows aspect ratio layout
   }
 }
 
@@ -117,7 +125,8 @@ export default {
 }
 
 .lh-real-estate-collection__remaining {
-  @apply text-white absolute top-21 right-0 font-semibold text-lg leading-6 w-15 text-center;
+  @apply text-white absolute top-0 right-0 bottom-0 font-semibold text-lg text-center flex items-center justify-center;
+  width: 20.54%; // allows aspect ratio layout
 }
 
 .lh-real-estate-collection--single {
@@ -131,11 +140,13 @@ export default {
 
 .lh-real-estate-collection--double {
   .lh-real-estate-collection__preview {
-    &:first-child {
-      @apply w-40;
-    }
     &:last-child {
-      @apply w-37 left-0 right-auto;
+      @apply left-0 right-auto;
+      width: 51.36%; // allows aspect ratio layout
+    }
+
+    &:first-child {
+      width: 54.79%; // allows aspect ratio layout
     }
   }
 }
