@@ -4,6 +4,11 @@
 
 Check the [project video explanation here](https://drive.google.com/file/d/1cUaPpGUKE1n8ocXDZyLNX5y-Zwi93Z44/view?usp=sharing)
 
+## Deployment
+
+- Spanish (default) version: [https://lahaus.goalflags.com/](https://lahaus.goalflags.com/)
+- English version: [https://lahaus.goalflags.com/en](https://lahaus.goalflags.com/en)
+
 ## Build Setup
 
 ```bash
