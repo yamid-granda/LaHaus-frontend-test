@@ -1,5 +1,9 @@
 # test-LaHaus
 
+## Thesis
+
+Check the [project video explanation here](https://drive.google.com/file/d/1cUaPpGUKE1n8ocXDZyLNX5y-Zwi93Z44/view?usp=sharing)
+
 ## Build Setup
 
 ```bash
@@ -15,6 +19,16 @@ $ npm run start
 
 # generate static project
 $ npm run generate
+```
+
+## Unit tests
+
+```bash
+# run all tests
+$ npm nun test
+
+# test driven development environment
+$ npm run tdd
 ```
 
 For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
