@@ -10,14 +10,14 @@
         <HamburgerIcon />
       </div>
       <div class="lh-navbar__brand">
-        <a href="https://www.lahaus.com/" target="_blank">
+        <nuxt-link to="/">
           <div class="lh-navbar__iso-type">
             <IsoTypeIcon />
           </div>
           <div class="lh-navbar__symbol-logo">
             <SymbolLogoIcon />
           </div>
-        </a>
+        </nuxt-link>
       </div>
     </div>
 
