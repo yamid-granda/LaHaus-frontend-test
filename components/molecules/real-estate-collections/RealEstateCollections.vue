@@ -7,7 +7,7 @@
         :to="`/${id}`"
         class="lh-real-estate-collections__collection"
       >
-        <RealEstateCollection :name="name" :real-estates="realEstates"></RealEstateCollection>
+        <RealEstateCollection :name="name" :real-estates="realEstates" />
       </nuxt-link>
       <slot name="after-last-collection" />
     </div>
@@ -30,5 +30,9 @@ export default {
 
 .lh-real-estate-collections__collections {
   @apply mx-auto grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-8 lg:grid-cols-3;
+}
+
+.lh-real-estate-collections__collection {
+  @apply w-73 cursor-pointer;
 }
 </style>
